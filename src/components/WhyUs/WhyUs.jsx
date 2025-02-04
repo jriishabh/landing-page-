@@ -19,7 +19,7 @@ const WhyUs = () => {
   return (
     <div className="whyus-container" data-aos="fade-up">
       <div className="whyus-text">
-        <h2 className="whyus-heading" >
+        <h2 className="whyus-heading" data-aos="fade-up">
           Our Authorised <br /> Training Partners
         </h2>
         

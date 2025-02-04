@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Hero.css";
-import whatsapp from '../../assets/whatsapp.jpg';
+import whatsapp from '../../assets/Whatsapp.jpg';
 import callicon from '../../assets/callicon.png';
+
 
 const Hero = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -39,7 +40,7 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <div className="hero-content">
-        <h1>Certified Ethical Hacker v13</h1>
+        <h1>Certified <br/> Ethical Hacker v13</h1>
         <p>World’s No.1 ethical hacking certification, now with the power of AI</p>
         <button className="hero-button">Enquire</button>
       </div>

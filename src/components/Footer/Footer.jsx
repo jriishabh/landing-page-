@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import logo from '../../assets/cyberdefentech.png'; // Adjust import path as needed
 
+
 const Footer = () => (
   <div className="footer-container">
     <img src={logo} className="footer-logo" alt="Clarity Money Logo" />

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Summary.css";
-import pdf from "../../assets/broscher.pdf";
+
 
 const Summary = () => {
   return (
