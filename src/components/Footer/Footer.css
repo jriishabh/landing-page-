@@ -1,0 +1,38 @@
+.footer-container {
+  position: relative;
+  padding: 16px 24px;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+  min-height: 120px; /* Adjust based on logo size */
+
+}
+
+.footer-logo {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  height: 60px; /* Adjust logo size as needed */
+  width: auto;
+}
+
+.footer-content {
+  margin-left: 120px; 
+  align-items: end;
+  justify-content: end;
+}
+
+.footer-line {
+  margin-bottom: 8px;
+}
+
+.footer-divider {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-year {
+  margin-top: 8px;
+}

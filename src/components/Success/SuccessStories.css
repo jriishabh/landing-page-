@@ -1,0 +1,94 @@
+.success-stories {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+  
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  color: black;
+  line-height: 1.2;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;  /* Enable horizontal scrolling */
+  gap: 15px;
+  padding: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar */
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Adding a subtle 3D effect using box-shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
+}
+
+.carousel-item img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.large img {
+  width: 300px; /* Larger images for the top carousel */
+  height: 300px;
+}
+
+.small img {
+  width: 300px; /* Smaller images for the bottom carousel */
+  height: 300px;
+}
+
+/* Styling for carousel arrow buttons */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker background on hover */
+}

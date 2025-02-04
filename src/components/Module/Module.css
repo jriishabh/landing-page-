@@ -1,0 +1,264 @@
+.module-page {
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 20px;
+  padding: 80px;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, white 50%, #f8f9fc 50%);
+}
+
+/* Module container */
+.module-container {
+  width: 60%;
+  max-width: 700px;
+  min-width: 300px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease-in-out;
+  animation: fadeInEffect 0.5s ease-in-out;
+  
+  
+}
+
+/* Module list */
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+/* Module items */
+.module-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.module-item:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.module-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Load buttons container */
+.load-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Instructor section */
+.instructor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.instructor h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.instructor p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+/* ================= FORM SECTION UPDATED ================= */
+
+/* Form container */
+.form-container {
+  
+  width: 18%;  /* Made it slimmer */
+  min-width: 280px;
+  padding: 30px;
+  background: #001e40; /* Dark blue theme */
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  animation: fadeInEffect 0.5s ease-in-out;
+  color: white;
+  text-align: center;
+  position: sticky; /* Make it sticky */
+  top: 50px; /* Adjust this value to add space from the top when it sticks */
+  z-index: 10; /* Ensure it stays above other content */
+}
+
+/* Form title */
+.form-container h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+
+/* Form fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Labels */
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Inputs & Select */
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  color: #001e40;
+  font-weight: bold;
+}
+
+.form-group input::placeholder,
+.form-group select {
+  color: #001e40;
+  opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Submit button */
+.submit-btn {
+  padding: 12px 25px;
+  background: white;
+  color: #001e40;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background: #f0f0f0;
+}
+
+.submit-btn.load-more {
+  background: transparent;
+  color: black;
+  border: 2px solid white;
+  padding: 12px 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn.load-more:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.submit-btn.load-less-btn {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 12px 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn.load-less-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+
+@media (max-width: 1090px) {
+  .module-container {
+    width: 65%;
+  }
+
+  .form-container {
+    width: 45%;
+    position: relative;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .module-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .module-container,
+  .form-container {
+    width: 90%;
+  }
+
+  .load-buttons {
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .form-container{
+    position: relative;
+  }
+}

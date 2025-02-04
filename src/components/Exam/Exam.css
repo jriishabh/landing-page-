@@ -1,0 +1,107 @@
+/* Background and layout */
+.exam-space {
+  background: linear-gradient(to right, #ffffff 50%, #f4f6f9 50%);
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.exam-container {
+  max-width: 1200px;
+  width: 90%;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.exam-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #001e40;
+  margin-bottom: 20px;
+}
+
+.exam-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.exam-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.exam-section {
+  flex: 1;
+  padding: 25px;
+  background-color: #f9f9fb;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.exam-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #001e40;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #001e40;
+  padding-bottom: 8px;
+}
+
+.exam-list {
+  
+ margin: 0;
+  color: #333;
+  font-size: 16px;
+  list-style: none;
+  margin-bottom: 30px;
+  
+}
+
+.exam-info p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.exam-info strong {
+  color: #001e40;
+}
+
+/* Hover effect for sections */
+.exam-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exam-container {
+    padding: 20px;
+  }
+
+  .exam-sections {
+    flex-direction: column;
+  }
+
+  .exam-section {
+    margin-bottom: 20px;
+  }
+
+  .exam-title {
+    font-size: 28px;
+  }
+
+  .exam-subtitle {
+    font-size: 20px;
+  }
+}

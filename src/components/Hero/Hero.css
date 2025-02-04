@@ -1,0 +1,188 @@
+.hero-container {
+  height: 60vh;
+  width: 100%;
+  background-image: url("../../assets/image (16).webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 80%;
+  padding: 20px;
+  z-index: 1; /* Ensures content stays on top of the overlay */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* Default hero-nav inside hero */
+.hero-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero-nav.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-nav li {
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+}
+
+
+
+.hero-nav li a.active {
+  color: #fff; /* Ensures text color is white when active */
+  font-weight: bold;
+  padding: 5px;
+  border-bottom: 3px solid #001e40;
+}
+
+.call-section {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.call-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.call-text {
+  font-size: 1rem;
+  text-align: left;
+  margin-right: 5vh;
+}
+.call-text span a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.call-text span:first-child {
+  font-weight: bold;
+}
+
+.whatsapp-logo {
+  position: fixed;
+  bottom: 20px; /* Adjust the space from bottom */
+  right: 20px;  /* Adjust the space from right */
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+  z-index: 1000; /* Ensures it's above other content */
+}
+
+.whatsapp-logo img {
+  width: 50px;  /* Adjust size of logo */
+  height: 50px; /* Adjust size of logo */
+}
+
+
+@media (max-width: 768px) {
+  .hero-nav.sticky {
+    height: 40px; /* Increase height for small screens */
+    padding: 20px 0; /* More padding to make the navbar taller */
+    background-color: rgba(0, 0, 0, 0.5); /* Make navbar more transparent */
+  }
+
+  .hero-nav ul {
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 0; /* Avoids unwanted space if the list is too wide */
+  }
+
+  .hero-nav li {
+    font-size: 1rem; /* Larger font size for better visibility */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 1018px) {
+  .hero-nav .call-section{
+    display: none;
+  }
+}
